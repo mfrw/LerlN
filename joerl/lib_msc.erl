@@ -19,3 +19,7 @@ pythagtriplet(N) ->
 	  A+B+C =< N,
 	  A*A+B*B =:= C*C
 	].
+
+% Permutations
+perms([]) -> [[]];
+perms(L) -> [[H|T] || H <- L, T <- perms(L--[H])].
